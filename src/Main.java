@@ -10,13 +10,15 @@ public class Main {
         Conta cp = new ContaPoupanca(cliente);
 
         //Conta Corrente
-        cc.depositar(1500);
+        
+        cc.depositar(450);
         cc.transferir(cp, 340);
+        cp.sacar(300);
 
         //Conta Poupança
 
-        cp.depositar(450);
-        cp.depositar(120);
+        //cp.depositar(450);
+        //cp.depositar(120);
         cc.imprimirExtrato();
         cp.imprimirExtrato();
 

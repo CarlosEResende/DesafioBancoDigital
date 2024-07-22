@@ -7,8 +7,11 @@ public class ContaCorrente extends Conta{
 
     @Override
     public void imprimirExtrato() {
-        System.out.println("Extrato Conta Corrente ===");
+        System.out.println("============================================================");
+        System.out.println("Extrato Conta Corrente");
         imprimirInformacoesComuns();
+        System.out.println("============================================================");
+
         
         
     }

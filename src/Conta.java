@@ -21,25 +21,53 @@ public abstract class Conta implements InterfaceConta {
     @Override
     public void sacar(double valor) {
 
-        if(saldo <= 0){
-
+        if (valor <= 0) {
+            System.out.println("O valor de saque deve ser positivo e maior que zero.");
+            return;
         }
+
+        else if (valor > saldo) {
+            System.err.println("Saldo Insuficiente!");
+            return;
+        }
+
         this.saldo -= valor;
+        System.out.println("Saque no Valor de: " + valor + " Realizado com Sucesso!");
 
     }
 
     @Override
     public void depositar(double valor) {
 
+        if (valor <= 0) {
+            System.out.println("O valor de depósito deve ser positivo e maior que zero.");
+            return;
+        }
+
         this.saldo += valor;
+
+        System.out.println("Deposito no Valor de: " + valor + " Realizado com Sucesso!");
+
 
     }
 
     @Override
     public void transferir(InterfaceConta contaDestino, double valor) {
 
-        this.sacar(valor);
-        contaDestino.depositar(valor);
+        if (valor <= 0) {
+            System.out.println("O valor da transferência deve ser positivo e maior que zero.");
+            return; 
+        }
+    
+        if (valor > saldo) {
+            System.out.println("Saldo Insuficiente para Transferência!");
+            return; 
+        }
+    
+        this.sacar(valor); 
+        contaDestino.depositar(valor); 
+        System.out.println("Transferência Realizada com Sucesso!");
+        
 
     }
 
