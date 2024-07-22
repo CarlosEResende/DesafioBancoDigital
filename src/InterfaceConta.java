@@ -7,5 +7,7 @@ public interface InterfaceConta {
     public void transferir(InterfaceConta contaDestino, double valor);
 
     void imprimirExtrato();
+
+    void imprimirTotais();
     
 }

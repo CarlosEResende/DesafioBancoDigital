@@ -12,14 +12,19 @@ public class ContaCorrente extends Conta{
         imprimirInformacoesComuns();
         System.out.println("============================================================");
 
-        
-        
+       
     }
 
-    
+    @Override
+    public void imprimirTotais() {
 
+        System.out.println("============================================================");
+        System.out.println("Imprimindo Totais");
+        super.imprimirTotais();
+        System.out.println("============================================================");
 
-
+        
+    }
 
     
 

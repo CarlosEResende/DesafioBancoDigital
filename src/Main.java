@@ -4,6 +4,7 @@ public class Main {
 
         Cliente cliente = new Cliente();
         cliente.setNome("Carlos");
+       
         
 
         Conta cc = new ContaCorrente(cliente);
@@ -11,16 +12,27 @@ public class Main {
 
         //Conta Corrente
         
-        cc.depositar(450);
-        cc.transferir(cp, 340);
-        cp.sacar(300);
+        
+        cc.depositar(500);
+        cc.sacar(40); 
+        cc.depositar(20); 
+        cc.transferir(cp, 10); 
 
+        //cc.transferir(cp, 50);  // 50 será retirado de cc e adicionado a cp
+        
         //Conta Poupança
 
-        //cp.depositar(450);
-        //cp.depositar(120);
-        cc.imprimirExtrato();
-        cp.imprimirExtrato();
+        //cp.depositar(100);
+        //cp.sacar(25);
+        //cp.transferir(cc, 10);
+
+    
+        //cc.imprimirExtrato();
+        cc.imprimirTotais();
+        //cp.imprimirExtrato();
+
+        
+        
 
       
         

@@ -11,6 +11,16 @@ public class ContaPoupanca extends Conta {
         System.out.println("Extrato Conta Poupanca");
         imprimirInformacoesComuns();
         System.out.println("============================================================");
+        
+    }
+
+    @Override
+    public void imprimirTotais() {
+
+        System.out.println("============================================================");
+        System.out.println("Imprimindo Totais");
+        super.imprimirTotais();
+        System.out.println("============================================================");
 
         
     }
